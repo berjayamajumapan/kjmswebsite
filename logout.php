@@ -1,0 +1,12 @@
+<?php
+if(isset($_GET['logout'])){
+	if($_GET['logout']==1){
+	$_SESSION['id']="";
+	$_SESSION['pass']="";
+	session_start();
+	session_destroy();
+	session_unset();
+	header("Location:index.php");
+	}
+}
+?>
